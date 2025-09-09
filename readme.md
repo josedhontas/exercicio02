@@ -23,7 +23,7 @@ Este projeto tem como objetivo coletar e analisar a latência de rede (RTT - Rou
 
 ### Passo 2: Executar a Análise Estatística
 
-1. 1. Torne o script de coleta executável:
+1. Torne o script de coleta executável:
    ```bash
 pip install -r requirements.txt
 
