@@ -12,7 +12,7 @@ Este projeto tem como objetivo coletar e analisar a latência de rede (RTT - Rou
 
 1. Torne o script de coleta executável:
     ```bash
-chmod +x coleta_ping.sh
+    chmod +x coleta_ping.sh
     ```
 
 2. Execute a coleta de ping para cada tipo de conexão:
