@@ -12,25 +12,25 @@ Este projeto tem como objetivo coletar e analisar a latência de rede (RTT - Rou
 
 1. Torne o script de coleta executável:
    ```bash
-   chmod +x coleta_ping.sh
-    ```
+        chmod +x coleta_ping.sh
+
 2. Execute a coleta de ping para cada tipo de conexão:
    ```bash
-   ./coleta_ping.sh CABO
-   ./coleta_ping.sh 4G
-    ```
+        ./coleta_ping.sh CABO
+        ./coleta_ping.sh 4G
+
 
 ### Passo 2: Executar a Análise Estatística
 
 1. Instale as dependências necessárias:
    ```bash
-    pip install -r requirements.txt
-    ```
+        pip install -r requirements.txt
+  
 
 2. Execute o script principal:
     ```bash
-     python main.py
-    ```
+        python main.py
+
 
 O script irá:
 
