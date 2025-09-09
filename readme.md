@@ -8,7 +8,7 @@ Este projeto tem como objetivo coletar e analisar a latência de rede (RTT - Rou
 
 ## Como Executar
 
-###  Passo 1: Coleta de Dados
+### Passo 1: Coleta de Dados
 
 1. Torne o script de coleta executável:
    ```bash
@@ -21,5 +21,9 @@ Este projeto tem como objetivo coletar e analisar a latência de rede (RTT - Rou
    ./coleta_ping.sh 4G
 
 
+### Passo 2: Executar a Análise Estatística
 
+1. 1. Torne o script de coleta executável:
+   ```bash
+pip install -r requirements.txt
 
