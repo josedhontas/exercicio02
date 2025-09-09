@@ -70,27 +70,33 @@ A tabela abaixo resume as principais métricas estatísticas calculadas para as 
 * **Latência (RTT):** A conexão **4G** apresenta uma latência média (210.1 ms) quase **100 vezes maior** que a da conexão a **CABO** (2.2 ms). A mediana também confirma essa grande disparidade, indicando que o 4G é consistentemente mais lento.
 * **Variabilidade e Estabilidade:** O **Desvio Padrão** e a **Variância** da conexão **4G** são ordens de magnitude maiores que os da conexão a **CABO**. Isso indica que a conexão 4G é muito mais instável e imprevisível, com picos de latência significativos. O **Coeficiente de Variação (CV)** maior que 1 para o 4G reforça a alta dispersão dos dados em relação à sua média.
 
-### 2. Análise Gráfica
+## Resultados e Análise
 
-Os gráficos gerados permitem uma interpretação visual clara das características de cada conexão.
+A análise foi realizada a partir de 100 amostras de RTT (`ping`) de cada tipo de conexão. Os resultados visuais e estatísticos estão consolidados abaixo.
 
-![Análise Gráfica das Conexões](https://i.imgur.com/gK5UjF7.png)
+### Gráficos da Análise
+*Aqui você deve inserir a sua imagem. Substitua o texto abaixo pela sua imagem.*
+![Análise Gráfica das Conexões](URL_DA_SUA_IMAGEM_AQUI.png)
 
-* **Boxplot por Conexão:**
-    * O boxplot da conexão a **CABO** é extremamente compacto e próximo de zero, mostrando que 99% dos pings tiveram RTT muito baixo e consistente.
-    * Em contraste, o boxplot do **4G** é muito mais "alto" e alongado, ilustrando a alta variabilidade e a maior mediana. O ponto acima do limite superior ("whisker") indica a presença de um *outlier*, um valor de RTT excepcionalmente alto (acima de 800 ms).
+### Resumo Estatístico
 
-* **Distribuição dos RTTs (Histograma):**
-    * O histograma confirma que os valores de RTT da conexão a **CABO** estão fortemente concentrados entre 1 e 4 ms.
-    * A distribuição do **4G** é assimétrica à direita (*right-skewed*), o que é típico para dados de latência de rede. Isso significa que, embora a maioria dos valores se concentre em uma faixa (em torno de 100-200 ms), ocorrem picos de latência muito elevados que "puxam" a média para cima.
+| Métrica | CABO | 4G |
+| :--- | :--- | :--- |
+| **Média** | 2.2239 ms | 210.1651 ms |
+| **Mediana** | 2.165 ms | 151.0 ms |
+| **Desvio Padrão** | 1.0535 | 244.6558 |
+| **Variância** | 1.1099 | 59856.51 |
+| **Q1 (1º Quartil)**| 1.8075 | 118.5 ms |
+| **Q3 (3º Quartil)**| 2.5 ms | 291.5 ms |
 
-### 3. Verificação de Normalidade e Distribuição de Probabilidade
+### Conclusões Principais
 
-* **Gráfico QQ-Plot (Normalidade):** Este gráfico compara os quantis dos dados observados com os quantis teóricos de uma Distribuição Normal. Para ambas as conexões, mas de forma muito mais acentuada para o **4G**, os pontos desviam significativamente da linha vermelha de referência.
-* **Conclusão sobre a Distribuição:** A análise do QQ-Plot e do histograma assimétrico nos permite concluir que os dados de RTT, especialmente do 4G, **não seguem uma Distribuição Normal**. Uma distribuição de probabilidade mais adequada para modelar este tipo de dado seria a **Log-Normal** ou a **Exponencial**, que lidam melhor com valores assimétricos e estritamente positivos.
+1.  **Desempenho de Latência:** A conexão a **CABO** é drasticamente mais rápida. Sua latência média (2.22 ms) é quase **100 vezes menor** que a do **4G** (210.16 ms), como evidenciado no **Histograma** e no **Resumo Estatístico**.
 
-### 4. Teste de Média da Diferença entre Conexões
+2.  **Estabilidade e Previsibilidade:** A conexão **4G** é extremamente instável. O **Desvio Padrão** massivo (244.65) e o **Boxplot** muito alongado mostram uma grande variação nos tempos de resposta, incluindo *outliers* que superam 800 ms. Em contraste, a conexão a **CABO** é altamente consistente e previsível.
 
-O exercício propõe um teste para a média zero da diferença entre as conexões. Embora o teste estatístico formal (como um Teste T para amostras independentes) não esteja nos resultados gráficos, a análise descritiva e visual é tão conclusiva que podemos inferir o resultado.
+3.  **Distribuição dos Dados:** Os gráficos **QQ-Plot** e o **Histograma** assimétrico confirmam que os dados de RTT (especialmente do 4G) **não seguem uma Distribuição Normal**. A distribuição é assimétrica à direita (*right-skewed*), o que é típico em medições de latência.
 
-Com uma diferença de média de mais de 200 ms e variâncias completamente distintas, a hipótese nula de que a diferença entre as médias é zero seria **fortemente rejeitada** com um altíssimo nível de confiança estatística. Fica evidente que existe uma diferença real e muito significativa no desempenho de latência entre as duas conexões.
+## Veredito
+
+A análise comprova que existe uma diferença de performance **estatisticamente significativa** entre as duas tecnologias. Para atividades que exigem baixa latência e alta estabilidade (como jogos online, videochamadas ou operações em tempo real), a conexão a **CABO** é indiscutivelmente superior. A conexão **4G**, apesar de funcional, é mais lenta e muito mais suscetível a picos de latência.
