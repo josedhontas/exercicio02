@@ -29,4 +29,12 @@ Este projeto tem como objetivo coletar e analisar a latência de rede (RTT - Rou
     ```bash
      python main.py
 
+O script irá:
+
+Calcular estatísticas descritivas por tipo de conexão
+
+Gerar visualizações (boxplot, histograma, QQ-plot)
+
+
+
 
