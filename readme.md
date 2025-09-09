@@ -19,4 +19,8 @@ Este projeto tem como objetivo coletar e analisar a latência de rede (RTT - Rou
    ```bash
    ./coleta_ping.sh CABO
 
+```bash
+    ./coleta_ping.sh 4G
+
+
 
