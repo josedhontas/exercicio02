@@ -71,28 +71,26 @@ A tabela abaixo resume as principais métricas estatísticas calculadas para as 
 ### 2. Análise Gráfica
 
 #### Boxplot por Conexão
-*Substitua o texto abaixo pela imagem do seu Boxplot.*
-![Boxplot das conexões](caminho/para/seu_boxplot.png)
+<img width="751" height="565" alt="image" src="https://github.com/user-attachments/assets/8685c4a1-5286-4242-8025-b02bb8c15601" />
 
 **Análise do Boxplot:**
 O gráfico ilustra a enorme diferença de estabilidade. A conexão `CABO` apresenta um RTT baixo e extremamente consistente (boxplot compacto e próximo de zero), enquanto a `4G` possui altíssima variabilidade (boxplot alongado) e a presença de um *outlier* com latência superior a 800 ms.
 
 #### Distribuição dos RTTs (Histograma)
-*Substitua o texto abaixo pela imagem do seu Histograma.*
-![Histograma dos RTTs](caminho/para/seu_histograma.png)
+<img width="761" height="572" alt="image" src="https://github.com/user-attachments/assets/5586c291-a39f-4177-8513-bf48f65692d8" />
 
 **Análise do Histograma:**
 O histograma confirma que os RTTs da conexão `CABO` estão fortemente concentrados em valores muito baixos (< 5 ms). Em contrapartida, a distribuição do `4G` é **assimétrica à direita** (*right-skewed*), mostrando que, embora haja uma concentração de valores, ocorrem picos de latência muito altos que "puxam" a média para cima.
 
 #### Gráfico QQ-Plot (Verificação de Normalidade)
-*Substitua o texto abaixo pela imagem do seu QQ-Plot.*
-![Gráfico QQ-Plot](caminho/para/seu_qqplot.png)
+<img width="568" height="477" alt="image" src="https://github.com/user-attachments/assets/1eaa7f78-ef5c-4db2-9553-a4c548445687" />
+<img width="558" height="481" alt="image" src="https://github.com/user-attachments/assets/44340dfc-7264-4754-b0cb-a93225a11ef8" />
 
 **Análise do QQ-Plot:**
 Este gráfico compara os dados com uma distribuição normal teórica. Fica evidente que os pontos de ambas as conexões, mas principalmente do `4G`, desviam significativamente da linha de referência. Isso nos permite concluir que os dados de latência **não seguem uma Distribuição Normal**.
 
 ---
 
-## Conclusão Geral
+## Conclusão
 
 A análise conjunta dos dados estatísticos e dos gráficos comprova que a conexão a **CABO é significativamente superior** em latência e estabilidade. A conexão **4G**, nas condições testadas, demonstrou ser não apenas mais lenta, mas também muito mais imprevisível, tornando-a menos adequada para aplicações sensíveis a atrasos, como jogos online ou videoconferências.
