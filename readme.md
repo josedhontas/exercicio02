@@ -25,5 +25,5 @@ Este projeto tem como objetivo coletar e analisar a latência de rede (RTT - Rou
 
 1. Torne o script de coleta executável:
    ```bash
-pip install -r requirements.txt
+    pip install -r requirements.txt
 
